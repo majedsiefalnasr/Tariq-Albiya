@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>طريق البيئة للاستشارات المهنية</title>
+
+    <!-- Bootstrap 5.3 RTL (CSS only, no JS) -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css"
+      rel="stylesheet"
+      integrity="sha384-dpuaG1suU0eT09tx5plTaGMLBsfDLzUCCUXOY2j/LSvXYuG6Bqs43ALlhIqAJVRb"
+      crossorigin="anonymous" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+Arabic:wght@400;500;600;700&display=swap"
+      rel="stylesheet" />
+
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body id="container-animation" class="bg-soft">
+    <!-- Navbar -->
+    <header class="py-5">
+      <div class="container container-1116 d-flex align-items-center justify-content-between">
+        <a href="/" class="d-inline-block" aria-label="الشعار">
+          <img
+            src="./src/assets/images/logo.png"
+            alt="طريق البيئة للاستشارات المهنية"
+            class="brand-logo"
+            height="56" />
+        </a>
+
+        <a
+          href="#contact"
+          class="btn btn-dark btn-pill d-inline-flex align-items-center gap-3 pe-2 py-2">
+          <span class="fw-semibold">تواصل معنا</span>
+          <span class="icon-round bg-white d-inline-flex align-items-center justify-content-center">
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M21.0009 12C21.0009 13.182 20.7681 14.3524 20.3157 15.4444C19.8634 16.5364 19.2004 17.5286 18.3645 18.3643C17.5287 19.2 16.5364 19.863 15.4444 20.3152C14.3523 20.7674 13.1819 21.0001 11.9999 21C10.8067 21.0178 9.62191 20.7981 8.5144 20.3538C7.40688 19.9095 6.39876 19.2494 5.54869 18.4119C4.69862 17.5744 4.02357 16.5763 3.5628 15.4755C3.10203 14.3747 2.86475 13.1933 2.86475 12C2.86475 10.8067 3.10203 9.62527 3.5628 8.52449C4.02357 7.42372 4.69862 6.42556 5.54869 5.58806C6.39876 4.75057 7.40688 4.09047 8.5144 3.64616C9.62191 3.20186 10.8067 2.98221 11.9999 2.99999M20.5539 3.46899L14.9899 9.00999M20.5539 3.46899C20.0589 2.97399 16.7219 3.01899 16.0169 3.02899M20.5539 3.46899C21.0489 3.96399 21.0029 7.29899 20.9929 8.00499"
+                stroke="black"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+          </span>
+        </a>
+      </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="py-5 my-5">
+      <div class="container container-1116 text-center mt-5">
+        <div class="mx-auto" style="max-width: 800px">
+          <h1
+            class="display-5 fw-semibold lh-base mb-3 hero-title"
+            animation-onscroll="animate-text-vaporizing-show">
+            معًا نحو بيئةٍ سعوديةٍ <span class="text-brand fw-semibold">مستدامة</span>
+          </h1>
+          <p class="fs-4 text-700 mb-3" animation-onscroll="animate-text-vaporizing-show">
+            نُسهم في تحقيق مستهدفات رؤية 2030 من خلال تقديم حلول واستشارات بيئية تُحدث أثرًا حقيقيًا
+            في التنمية وجودة الحياة.
+          </p>
+          <div
+            class="d-flex justify-content-center mt-5"
+            animation-onscroll="animate-text-slideup-show">
+            <a
+              href="#services"
+              class="btn btn-dark btn-pill d-inline-flex align-items-center gap-3 pe-2 py-2">
+              <span class="fw-semibold">تعرف على خدماتنا</span>
+              <span
+                class="icon-round bg-white d-inline-flex align-items-center justify-content-center">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M4 11.9999H20M4 11.9999C4 13.3179 9 16.9999 9 16.9999M4 11.9999C4 10.6819 9 6.99994 9 6.99994"
+                    stroke="black"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+              </span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Image Mosaic -->
+        <div id="image-mosaic" class="d-flex gap-3 justify-content-center mt-5 pt-5">
+          <div class="img-mosaic img-mosaic-full">
+            <img src="./src/assets/images/hero-01.png" alt="" />
+          </div>
+          <div class="img-mosaic img-mosaic-80">
+            <img src="./src/assets/images/hero-02.png" alt="" />
+          </div>
+          <div class="img-mosaic img-mosaic-80">
+            <img src="./src/assets/images/hero-03.png" alt="" />
+          </div>
+          <div class="img-mosaic img-mosaic-80">
+            <img src="./src/assets/images/hero-04.png" alt="" />
+          </div>
+          <div class="img-mosaic img-mosaic-80">
+            <img src="./src/assets/images/hero-05.png" alt="منظر طبيعي" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About + Metrics -->
+    <section class="py-5 my-5">
+      <div class="container container-1116">
+        <p
+          class="fs-2 fw-medium text-700 mb-5"
+          style="max-width: 800px"
+          animation-onscroll="animate-text-vaporizing-show">
+          طريق البيئة للاستشارات المهنية, شركة سعودية رائدة في مجال الاستشارات البيئية، نعمل على دعم
+          القطاعين الحكومي والخاص في تحقيق التنمية المستدامة والمحافظة على البيئة، بما يتماشى مع
+          أهداف رؤية المملكة 2030.
+        </p>
+
+        <div class="row g-5 align-items-start mt-5">
+          <div class="col-lg-6">
+            <div class="bg-white shadow-soft rounded-4 p-4 mb-4">
+              <p
+                class="h2 text-brand mb-1 fw-bold"
+                animation-onscroll="animate-text-vaporizing-show">
+                +2500
+              </p>
+              <p class="fs-5 text-700 mb-0">عملاء راضون في أنحاء المملكة</p>
+            </div>
+
+            <div class="row g-4">
+              <div class="col-12 col-md-6">
+                <div class="bg-white shadow-soft rounded-4 p-4 h-100">
+                  <p
+                    class="h2 text-brand mb-1 fw-bold"
+                    animation-onscroll="animate-text-vaporizing-show">
+                    +120
+                  </p>
+                  <p class="fs-5 text-700 mb-0">مشروع ناجح تم تنفيذه باحتراف</p>
+                </div>
+              </div>
+              <div class="col-12 col-md-6">
+                <div class="bg-white shadow-soft rounded-4 p-4 h-100">
+                  <p
+                    class="h2 text-brand mb-1 fw-bold"
+                    animation-onscroll="animate-text-vaporizing-show">
+                    10
+                  </p>
+                  <p class="fs-5 text-700 mb-0">سنوات من الخبرة في السوق السعودي</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="mb-5">
+              <p class="h4 fw-semibold mb-2">رؤيتنا</p>
+              <p class="fs-5 text-700">
+                أن نكون الشريك البيئي الأول في المملكة، والمساهم الفعّال في بناء مستقبلٍ أخضر
+                ومستدام.
+              </p>
+            </div>
+            <div class="">
+              <p class="h4 fw-semibold mb-2">رسالتنا</p>
+              <p class="fs-5 text-700">
+                تقديم خدمات بيئية بمعايير عالمية، تُسهم في تحقيق التوازن بين التنمية وحماية البيئة.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="py-5 my-5">
+      <div class="container container-1116">
+        <div
+          class="d-flex flex-column flex-md-row align-items-start align-items-md-center justify-content-between gap-3 mb-4">
+          <div animation-onscroll="animate-text-vaporizing-show">
+            <p class="fs-2 fw-medium text-700 mb-0">نهدف إلى تقديم حلول متكاملة</p>
+            <p class="fs-2 fw-medium">تدعم التنمية البيئية في المملكة</p>
+          </div>
+          <a
+            href="#contact"
+            class="btn btn-dark btn-pill d-inline-flex align-items-center gap-3 pe-2 py-2">
+            <span class="fw-semibold">اطلب خدمة</span>
+            <span
+              class="icon-round bg-white d-inline-flex align-items-center justify-content-center">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M4 11.9999H20M4 11.9999C4 13.3179 9 16.9999 9 16.9999M4 11.9999C4 10.6819 9 6.99994 9 6.99994"
+                  stroke="black"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </span>
+          </a>
+        </div>
+
+        <div class="row g-3 justify-content-end">
+          <div class="col-12 col-md-6">
+            <div class="card-plain p-4 rounded-4">
+              <div class="fs-1" aria-hidden="true">🌾️</div>
+              <div class="mt-2">
+                <p class="h4 text-brand fw-bold mb-1">إدارة النفايات</p>
+                <p class="mb-0 text-700">حلول مبتكرة لإدارة المخلفات وتقليل الانبعاثات.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6">
+            <div class="card-plain p-4 rounded-4">
+              <div class="fs-1" aria-hidden="true">♻️</div>
+              <div class="mt-2">
+                <p class="h4 text-brand fw-bold mb-1">الاستشارات البيئية</p>
+                <p class="mb-0 text-700">إعداد الدراسات والتقارير البيئية للمشاريع.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6">
+            <div class="card-plain p-4 rounded-4">
+              <div class="fs-1" aria-hidden="true">🧭️</div>
+              <div class="mt-2">
+                <p class="h4 text-brand fw-bold mb-1">التأهيل البيئي</p>
+                <p class="mb-0 text-700">تدريب الكوادر الوطنية على ممارسات الاستدامة.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6">
+            <div class="card-plain p-4 rounded-4">
+              <div class="fs-1" aria-hidden="true">💧</div>
+              <div class="mt-2">
+                <p class="h4 text-brand fw-bold mb-1">حماية الموارد الطبيعية</p>
+                <p class="mb-0 text-700">استراتيجيات للحفاظ على المياه والتربة.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="d-flex justify-content-center mt-5 pt-4">
+          <a
+            href="#services"
+            class="btn btn-light btn-pill-outline d-inline-flex align-items-center gap-3 pe-2 py-2">
+            <span class="fw-semibold text-dark">كل الخدمات</span>
+            <span
+              class="icon-round bg-dark text-white d-inline-flex align-items-center justify-content-center">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M4 12H20M4 12C4 13.318 9 17 9 17M4 12C4 10.682 9 7 9 7"
+                  stroke="white"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CEO -->
+    <section class="py-5 my-5">
+      <div class="container container-1116">
+        <div class="d-flex g-4 gap-5 align-items-start justify-content-center">
+          <div
+            class="ratio rounded-4 overflow-hidden shadow-soft"
+            style="max-width: 260px; aspect-ratio: 1 / 1.2"
+            style="max-width: 260px; margin-inline-end: auto">
+            <img
+              src="http://localhost:3845/assets/744e135796b12c1fe8d1607f7527ec1648d1e574.png"
+              alt="صورة الرئيس التنفيذي"
+              class="object-cover" />
+          </div>
+          <div style="max-width: 700px" animation-onscroll="animate-text-vaporizing-show">
+            <div class="mb-2">
+              <p class="h3 fw-semibold mb-1">خالد مضحي الديحاني</p>
+              <p class="fs-5 fw-medium text-700 mb-0">كلمة الرئيس التنفيذي</p>
+            </div>
+            <p class="fs-4 mt-3">
+              نفتخر في طريق البيئة بأن نكون جزءًا من مسيرة المملكة نحو مستقبلٍ أخضرٍ مستدام، نعمل
+              فيه بروح الفريق والشغف لخدمة وطننا الغالي والمجتمع. هدفنا هو تحويل الطموح البيئي إلى
+              واقع ملموس يدعم جودة الحياة للأجيال القادمة.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why us -->
+    <section class="py-5 my-5">
+      <div class="container container-1116 text-center">
+        <p class="h3 fw-semibold mb-4">لماذا نحن</p>
+
+        <div class="d-flex flex-wrap justify-content-center gap-3">
+          <span class="pill">فريق سعودي مؤهل</span>
+          <span class="pill">التزام كامل بالاستدامة الوطنية</span>
+          <span class="pill">حلول مخصصة لكل قطاع</span>
+          <span class="pill">خبرة محلية بمعايير عالمية</span>
+          <span class="pill">ابتكار دائم لتلبية احتياجات السوق</span>
+          <span class="pill">شراكات استراتيجية مع المؤسسات العالمية</span>
+          <span class="pill">تدريب وتطوير الكوادر المحلية</span>
+          <span class="pill">تحقيق نتائج قابلة للقياس</span>
+          <span class="pill">رؤية شاملة للمستقبل المستدام</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Partners -->
+    <section class="py-5 my-5">
+      <div class="container container-1116 text-center">
+        <div class="mx-auto" style="max-width: 736px">
+          <p class="h3 fw-semibold mb-2">شركاء النجاح</p>
+          <p class="text-700">
+            منذ انطلاقتنا، حرصت تجميع على التعاون مع شركاء استراتيجيين. بفضل هذه الشراكات، استطعنا
+            توفير حلول فعّالة ومستدامة لعملائنا والمساهمة في حماية البيئة وتعزيز الاستدامة تحت رؤية
+            المملكة 2030.
+          </p>
+        </div>
+
+        <div class="row g-4 justify-content-center mt-2">
+          <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+            <div class="partner-box">
+              <img
+                src="http://localhost:3845/assets/693c43b20c2f5ea65c2a798f39ec96f58ef97d9c.png"
+                alt="شريك" />
+            </div>
+          </div>
+          <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+            <div class="partner-box">
+              <img
+                src="http://localhost:3845/assets/35660a1882066b639310fbb84f4906f100a86d08.png"
+                alt="شريك" />
+            </div>
+          </div>
+          <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+            <div class="partner-box">
+              <img
+                src="http://localhost:3845/assets/bb74bf62f712a20e471db4d246bfd27b92b8e74e.png"
+                alt="شريك" />
+            </div>
+          </div>
+          <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+            <div class="partner-box">
+              <img
+                src="http://localhost:3845/assets/c5a5c355b1cfbfab800d9b5fca1d7a5ee1c9f12f.png"
+                alt="شريك" />
+            </div>
+          </div>
+          <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+            <div class="partner-box">
+              <img
+                src="http://localhost:3845/assets/62e7eb1e65463128f51fdb987be62cf09a1a9528.png"
+                alt="شريك" />
+            </div>
+          </div>
+          <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+            <div class="partner-box">
+              <img
+                src="http://localhost:3845/assets/b4eb37b1b484a3ad088fb00aad94b8c13ab67bd2.png"
+                alt="شريك" />
+            </div>
+          </div>
+          <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+            <div class="partner-box">
+              <img
+                src="http://localhost:3845/assets/854ce6094c3fda1bb4ec75a692a3701266395b5a.png"
+                alt="شريك" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="position-relative py-5">
+      <div class="footer-bg d-none d-md-block" aria-hidden="true">
+        <img
+          src="http://localhost:3845/assets/1a29cd0ed64db5c338cf14c8c6bb56f9be143bf1.svg"
+          alt="" />
+      </div>
+
+      <div class="container container-1116">
+        <div
+          class="bg-white shadow-soft rounded-4 p-4 p-md-5 d-flex flex-column flex-lg-row gap-5 justify-content-between align-items-end">
+          <div class="flex-grow-1" style="max-width: 600px">
+            <img
+              src="http://localhost:3845/assets/80d9d5134654a7881fa9a3d5b8bee88922b69b8c.png"
+              alt="طريق البيئة"
+              class="brand-logo mb-3"
+              style="height: 120px"
+              height="56" />
+            <p class="mb-0">
+              طريق البيئة للاستشارات المهنية, شركة سعودية رائدة في مجال الاستشارات البيئية، نعمل على
+              دعم القطاعين الحكومي والخاص في تحقيق التنمية المستدامة والمحافظة على البيئة، بما
+              يتماشى مع أهداف رؤية المملكة 2030.
+            </p>
+          </div>
+
+          <div>
+            <p class="mb-2">يسعدنا تواصلكم لأي استفسار أو تعاون بيئي.</p>
+            <p class="mb-2">📍 الرياض، المملكة العربية السعودية</p>
+            <p class="mb-2">📞 +966 55 000 0000</p>
+            <p class="mb-0">✉️ info@tareeqalbeeah.sa</p>
+            <p class="text-600 small mb-0 mt-4">
+              © طريق البيئة للاستشارات المهنية — جميع الحقوق محفوظة
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@formkit/auto-animate@0.9.0/dist/auto-animate.min.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>

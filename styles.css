@@ -1,0 +1,205 @@
+:root {
+  --brand: #437d47;
+  --bg-soft: #f4f7f3;
+  --text-700: #202020;
+  --text-600: #686868;
+  --radius-24: 24px;
+  --radius-32: 32px;
+  --radius-40: 40px;
+  --radius-48: 48px;
+  --radius-100: 100px;
+  --container-max: 1116px;
+  --mosaic-collapsed: 8%;
+  --mosaic-expanded: 60%;
+}
+
+html,
+body {
+  font-family: 'Noto Sans Arabic', 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto,
+    'Helvetica Neue', Arial, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', sans-serif;
+  color: var(--text-700);
+}
+
+.bg-soft {
+  background: var(--bg-soft);
+}
+
+.container-1116 {
+  max-width: var(--container-max);
+}
+
+.text-brand {
+  color: var(--brand);
+}
+
+.text-700 {
+  color: var(--text-700);
+}
+.text-600 {
+  color: var(--text-600);
+}
+
+.brand-logo {
+  height: 64px;
+  width: auto;
+}
+
+.hero-title {
+  font-size: clamp(2rem, 5vw, 3.75rem);
+} /* ~64px max */
+
+.btn-pill {
+  border-radius: var(--radius-100);
+  padding: 0.75rem 1.25rem;
+}
+
+.btn-pill-outline {
+  border-radius: var(--radius-100);
+  padding: 0.75rem 1.25rem;
+  background: #fff;
+  border: 1px solid #e6e6e6;
+}
+
+.icon-round {
+  width: 36px;
+  height: 36px;
+  border-radius: 999px;
+}
+
+.shadow-soft {
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Mosaic images */
+.img-mosaic {
+  will-change: flex-basis, height, border-radius, transform;
+  transition: flex-basis 350ms ease, height 350ms ease, border-radius 350ms ease,
+    transform 250ms ease;
+  flex: 0 0 var(--mosaic-collapsed);
+}
+.img-mosaic-80,
+.img-mosaic-full {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius-32);
+  cursor: pointer;
+}
+.img-mosaic-80 {
+  height: 360px;
+}
+.img-mosaic-80 img,
+.img-mosaic-full img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+.img-mosaic-full {
+  height: 360px;
+  flex-basis: var(--mosaic-expanded);
+  border-radius: var(--radius-48);
+}
+
+/* Contain overflow to avoid horizontal scroll during expansion */
+#image-mosaic {
+  overflow: hidden;
+}
+
+/* Service cards */
+.card-plain {
+  background: #fff;
+  border: 1px solid #eee;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.08);
+}
+
+/* Why-us pills */
+.pill {
+  display: inline-block;
+  background: #fff;
+  border-radius: var(--radius-24);
+  padding: 0.75rem 1rem;
+  border: 1px solid #eee;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.06);
+  white-space: nowrap;
+}
+
+/* Partners */
+.partner-box {
+  height: 100px;
+  display: grid;
+  place-items: center;
+  border-radius: var(--radius-24);
+  background: #fff;
+  border: 1px solid #eee;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.06);
+  overflow: hidden;
+}
+.partner-box img {
+  max-height: 84px;
+  max-width: 90%;
+  object-fit: contain;
+}
+
+/* Footer bg art (decorative) */
+.footer-bg {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  pointer-events: none;
+  opacity: 0.15;
+}
+.footer-bg img {
+  max-width: 90%;
+  height: auto;
+}
+
+/* Utilities */
+.object-cover {
+  object-fit: cover;
+}
+
+[animation-onscroll='animate-text-vaporizing-show'] {
+  filter: blur(100px);
+  transform: translateY(80px);
+  transition: filter 0.6s ease-out, transform 0.8s ease-out;
+}
+
+[animation-onscroll='animate-text-vaporizing-show'].animate {
+  filter: blur(0);
+  transform: translateY(0);
+}
+
+[animation-onscroll='animate-text-vaporizing-hide'] {
+  filter: blur(100px);
+  transform: translateY(80px);
+  transition: filter 0.6s ease-out, transform 0.8s ease-out;
+}
+
+[animation-onscroll='animate-text-vaporizing-hide'].animate {
+  filter: blur(0);
+  transform: translateY(0);
+}
+
+[animation-onscroll='animate-text-slideup-show'] {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.4s ease-out, transform 0.8s ease-out;
+}
+
+[animation-onscroll='animate-text-slideup-show'].animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+[animation-onscroll='animate-text-slideup-hide'] {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.4s ease-out, transform 0.8s ease-out;
+}
+
+[animation-onscroll='animate-text-slideup-hide'].animate {
+  opacity: 0;
+  transform: translateY(24px);
+}
