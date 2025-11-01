@@ -9,8 +9,6 @@
   --radius-48: 48px;
   --radius-100: 100px;
   --container-max: 1116px;
-  --mosaic-collapsed: 8%;
-  --mosaic-expanded: 60%;
 }
 
 html,
@@ -45,7 +43,7 @@ body {
 }
 
 .hero-title {
-  font-size: clamp(2rem, 5vw, 3.75rem);
+  font-size: clamp(3rem, 5vw, 3.75rem);
 } /* ~64px max */
 
 .btn-pill {
@@ -75,7 +73,7 @@ body {
   will-change: flex-basis, height, border-radius, transform;
   transition: flex-basis 350ms ease, height 350ms ease, border-radius 350ms ease,
     transform 250ms ease;
-  flex: 0 0 var(--mosaic-collapsed);
+  flex: 1 0 0%;
 }
 .img-mosaic-80,
 .img-mosaic-full {
@@ -97,8 +95,19 @@ body {
 }
 .img-mosaic-full {
   height: 360px;
-  flex-basis: var(--mosaic-expanded);
+  flex-basis: 60%;
   border-radius: var(--radius-48);
+}
+@media (max-width: 575.98px) {
+  .img-mosaic-80 {
+    height: 180px;
+    order: 1;
+  }
+  .img-mosaic-full {
+    height: 280px;
+    flex-basis: 100%;
+    order: 0;
+  }
 }
 
 /* Contain overflow to avoid horizontal scroll during expansion */
@@ -129,10 +138,10 @@ body {
   height: 100px;
   display: grid;
   place-items: center;
-  border-radius: var(--radius-24);
+  /* border-radius: var(--radius-24);
   background: #fff;
   border: 1px solid #eee;
-  box-shadow: 0 0 2px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.06); */
   overflow: hidden;
 }
 .partner-box img {
@@ -144,15 +153,48 @@ body {
 /* Footer bg art (decorative) */
 .footer-bg {
   position: absolute;
-  inset: 0;
-  display: grid;
-  place-items: center;
+  bottom: 0;
   pointer-events: none;
-  opacity: 0.15;
+  opacity: 1;
+  z-index: -1;
 }
 .footer-bg img {
-  max-width: 90%;
+  max-width: 100%;
   height: auto;
+}
+
+/* Sticky header */
+.sticky-header {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+.sticky-header > .container {
+  border-radius: 8px;
+  padding: 12px;
+  background-color: rgba(255, 255, 255, 0);
+  transition: background-color 220ms ease, box-shadow 220ms ease, padding 220ms ease,
+    border-radius 220ms ease;
+}
+
+.sticky-header.scrolled > .container {
+  border-radius: 100px;
+  background-color: rgb(255 255 255 / 100%);
+  box-shadow: 0 6px 18px rgba(32, 32, 32, 0.08);
+}
+
+@supports not ((-webkit-backdrop-filter: blur(1px)) or (backdrop-filter: blur(1px))) {
+  .sticky-header > .container {
+    background-color: rgba(255, 255, 255, 0.95);
+  }
+}
+
+@media (prefers-reduced-transparency: reduce) {
+  .sticky-header > .container {
+    background-color: rgba(255, 255, 255, 0.95) !important;
+    -webkit-backdrop-filter: none !important;
+    backdrop-filter: none !important;
+  }
 }
 
 /* Utilities */
@@ -203,3 +245,255 @@ body {
   opacity: 0;
   transform: translateY(24px);
 }
+
+/* Service Request Modal */
+.modal-services {
+  position: relative;
+  z-index: 1055;
+  background: transparent;
+}
+
+@media (max-width: 576px) {
+  .modal-services .modal-body {
+    padding-top: 80px !important;
+  }
+}
+
+.modal-services .modal-dialog {
+  max-width: 1116px;
+}
+
+.modal-inner {
+  border-radius: 40px;
+  background: #fff;
+  box-shadow: 0 20px 40px rgba(32, 32, 32, 0.08);
+  padding: 48px !important;
+}
+
+/* Modal heading - pixel-perfect sizing */
+#figmaModalLabel {
+  font-size: 2.5rem;
+  font-weight: 600;
+  line-height: 1.2;
+  margin-bottom: 2rem;
+  color: var(--text-700);
+  letter-spacing: -0.02em;
+}
+
+/* Category headings */
+.modal-inner .category h3 {
+  font-size: 1.75rem;
+  font-weight: 600;
+  line-height: 1.3;
+  margin-bottom: 0.75rem;
+  color: var(--text-700);
+  letter-spacing: -0.01em;
+}
+
+/* Category descriptions */
+.modal-inner .category p {
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: var(--text-600);
+  margin-bottom: 1.25rem;
+}
+
+/* Category spacing */
+.modal-inner .category {
+  margin-bottom: 3rem;
+}
+
+.modal-inner .category:last-of-type {
+  margin-bottom: 2rem;
+}
+
+/* Service chips - refined */
+.service-chip {
+  background: #f4f7f3;
+  border-radius: 20px;
+  padding: 14px 24px;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.4;
+  color: var(--text-700);
+  border: 1px solid rgba(67, 125, 71, 0.08);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.service-chip:hover {
+  background: #eaf0e9;
+  border-color: rgba(67, 125, 71, 0.15);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+  transform: translateY(-1px);
+}
+
+.service-chip:focus {
+  outline: 2px solid var(--brand);
+  outline-offset: 2px;
+}
+
+.service-chip:active {
+  transform: translateY(0);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+}
+
+/* Services list layout */
+.services-list {
+  gap: 12px !important;
+  margin-top: 1.5rem !important;
+}
+
+/* Close button positioning */
+.btn-close-pill {
+  top: 32px;
+  right: -54px;
+  border: none;
+  background: transparent;
+  z-index: 1060;
+  transition: transform 0.2s ease;
+}
+
+.btn-close-pill:hover {
+  transform: scale(1.08);
+}
+
+.close-icon-wrap {
+  width: 48px;
+  height: 48px;
+  transition: all 0.2s ease;
+}
+
+.btn-close-pill:hover .close-icon-wrap {
+  background: #f8f8f8;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+/* Modal CTA button */
+.modal-inner .btn-pill {
+  padding: 14px 32px;
+  font-size: 1.125rem;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.modal-inner .btn-pill:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .btn-close-pill {
+    right: 20px;
+    top: 20px;
+  }
+
+  .close-icon-wrap {
+    width: 40px;
+    height: 40px;
+  }
+
+  .modal-backdrop-custom {
+    backdrop-filter: blur(18px);
+  }
+
+  .modal-inner {
+    border-radius: 28px;
+    padding: 32px !important;
+  }
+
+  #figmaModalLabel {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .modal-inner .category h3 {
+    font-size: 1.5rem;
+  }
+
+  .modal-inner .category p {
+    font-size: 1rem;
+  }
+
+  .service-chip {
+    font-size: 0.9375rem;
+    padding: 12px 20px;
+  }
+
+  .services-list {
+    gap: 10px !important;
+  }
+
+  .modal-inner .category {
+    margin-bottom: 2.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .modal-inner {
+    padding: 24px !important;
+  }
+
+  #figmaModalLabel {
+    font-size: 1.75rem;
+  }
+
+  .modal-inner .category h3 {
+    font-size: 1.375rem;
+  }
+
+  .service-chip {
+    font-size: 0.875rem;
+    padding: 10px 18px;
+  }
+}
+
+/* Service detail view styles */
+.service-detail-view {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.service-detail-view h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+.service-detail-view .service-description p {
+  margin-bottom: 1.5rem;
+}
+
+.service-detail-view .service-description p:last-child {
+  margin-bottom: 0;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Service request form styles */
+.form-soft {
+  background: var(--bg-soft);
+  border: 1px solid #e6e6e6;
+  border-radius: 8px;
+}
+.form-soft:focus {
+  border-color: rgba(67, 125, 71, 0.35);
+  box-shadow: 0 0 0 0.2rem rgba(67, 125, 71, 0.08);
+}
+.form-label {
+  font-weight: 500;
+  color: var(--text-700);
+}
+
+/* End modal styles */

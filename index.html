@@ -24,7 +24,7 @@
   </head>
   <body id="container-animation" class="bg-soft">
     <!-- Navbar -->
-    <header class="py-5">
+    <header class="d-flex justify-content-center py-4 sticky-header px-2" id="site-header">
       <div class="container container-1116 d-flex align-items-center justify-content-between">
         <a href="/" class="d-inline-block" aria-label="الشعار">
           <img
@@ -36,6 +36,7 @@
 
         <a
           href="#contact"
+          id="contact-whatsapp"
           class="btn btn-dark btn-pill d-inline-flex align-items-center gap-3 pe-2 py-2">
           <span class="fw-semibold">تواصل معنا</span>
           <span class="icon-round bg-white d-inline-flex align-items-center justify-content-center">
@@ -59,7 +60,7 @@
 
     <!-- Hero -->
     <section class="py-5 my-5">
-      <div class="container container-1116 text-center mt-5">
+      <div class="container container-1116 text-center">
         <div class="mx-auto" style="max-width: 800px">
           <h1
             class="display-5 fw-semibold lh-base mb-3 hero-title"
@@ -98,7 +99,7 @@
         </div>
 
         <!-- Image Mosaic -->
-        <div id="image-mosaic" class="d-flex gap-3 justify-content-center mt-5 pt-5">
+        <div id="image-mosaic" class="d-flex flex-wrap gap-3 justify-content-center mt-5 pt-5">
           <div class="img-mosaic img-mosaic-full">
             <img src="./src/assets/images/hero-01.png" alt="" />
           </div>
@@ -194,8 +195,12 @@
             <p class="fs-2 fw-medium">تدعم التنمية البيئية في المملكة</p>
           </div>
           <a
-            href="#contact"
-            class="btn btn-dark btn-pill d-inline-flex align-items-center gap-3 pe-2 py-2">
+            href="#"
+            class="btn btn-dark btn-pill d-inline-flex align-items-center gap-3 pe-2 py-2"
+            role="button"
+            data-bs-toggle="modal"
+            data-bs-target="#serviceModal"
+            aria-controls="serviceModal">
             <span class="fw-semibold">اطلب خدمة</span>
             <span
               class="icon-round bg-white d-inline-flex align-items-center justify-content-center">
@@ -216,7 +221,7 @@
           </a>
         </div>
 
-        <div class="row g-3 justify-content-end">
+        <div class="row g-3">
           <div class="col-12 col-md-6">
             <div class="card-plain p-4 rounded-4">
               <div class="fs-1" aria-hidden="true">🌾️</div>
@@ -258,7 +263,11 @@
         <div class="d-flex justify-content-center mt-5 pt-4">
           <a
             href="#services"
-            class="btn btn-light btn-pill-outline d-inline-flex align-items-center gap-3 pe-2 py-2">
+            class="btn btn-light btn-pill-outline d-inline-flex align-items-center gap-3 pe-2 py-2"
+            role="button"
+            data-bs-toggle="modal"
+            data-bs-target="#serviceModal"
+            aria-controls="serviceModal">
             <span class="fw-semibold text-dark">كل الخدمات</span>
             <span
               class="icon-round bg-dark text-white d-inline-flex align-items-center justify-content-center">
@@ -284,15 +293,17 @@
     <!-- CEO -->
     <section class="py-5 my-5">
       <div class="container container-1116">
-        <div class="d-flex g-4 gap-5 align-items-start justify-content-center">
+        <div
+          class="d-flex flex-column flex-md-row g-4 gap-5 align-items-start justify-content-center">
           <div
             class="ratio rounded-4 overflow-hidden shadow-soft"
             style="max-width: 260px; aspect-ratio: 1 / 1.2"
             style="max-width: 260px; margin-inline-end: auto">
             <img
-              src="http://localhost:3845/assets/744e135796b12c1fe8d1607f7527ec1648d1e574.png"
+              src="./src/assets/images/ceo.png"
               alt="صورة الرئيس التنفيذي"
-              class="object-cover" />
+              class="object-cover"
+              onerror="this.style.display='none'" />
           </div>
           <div style="max-width: 700px" animation-onscroll="animate-text-vaporizing-show">
             <div class="mb-2">
@@ -344,50 +355,57 @@
           <div class="col-6 col-sm-4 col-md-3 col-lg-2">
             <div class="partner-box">
               <img
-                src="http://localhost:3845/assets/693c43b20c2f5ea65c2a798f39ec96f58ef97d9c.png"
-                alt="شريك" />
+                src="./src/assets/images/partners-01.png"
+                alt="شريك"
+                onerror="this.style.display='none'" />
             </div>
           </div>
           <div class="col-6 col-sm-4 col-md-3 col-lg-2">
             <div class="partner-box">
               <img
-                src="http://localhost:3845/assets/35660a1882066b639310fbb84f4906f100a86d08.png"
-                alt="شريك" />
+                src="./src/assets/images/partners-02.png"
+                alt="شريك"
+                onerror="this.style.display='none'" />
             </div>
           </div>
           <div class="col-6 col-sm-4 col-md-3 col-lg-2">
             <div class="partner-box">
               <img
-                src="http://localhost:3845/assets/bb74bf62f712a20e471db4d246bfd27b92b8e74e.png"
-                alt="شريك" />
+                src="./src/assets/images/partners-03.png"
+                alt="شريك"
+                onerror="this.style.display='none'" />
             </div>
           </div>
           <div class="col-6 col-sm-4 col-md-3 col-lg-2">
             <div class="partner-box">
               <img
-                src="http://localhost:3845/assets/c5a5c355b1cfbfab800d9b5fca1d7a5ee1c9f12f.png"
-                alt="شريك" />
+                src="./src/assets/images/partners-04.png"
+                alt="شريك"
+                onerror="this.style.display='none'" />
             </div>
           </div>
           <div class="col-6 col-sm-4 col-md-3 col-lg-2">
             <div class="partner-box">
               <img
-                src="http://localhost:3845/assets/62e7eb1e65463128f51fdb987be62cf09a1a9528.png"
-                alt="شريك" />
+                src="./src/assets/images/partners-05.png"
+                alt="شريك"
+                onerror="this.style.display='none'" />
             </div>
           </div>
           <div class="col-6 col-sm-4 col-md-3 col-lg-2">
             <div class="partner-box">
               <img
-                src="http://localhost:3845/assets/b4eb37b1b484a3ad088fb00aad94b8c13ab67bd2.png"
-                alt="شريك" />
+                src="./src/assets/images/partners-06.png"
+                alt="شريك"
+                onerror="this.style.display='none'" />
             </div>
           </div>
           <div class="col-6 col-sm-4 col-md-3 col-lg-2">
             <div class="partner-box">
               <img
-                src="http://localhost:3845/assets/854ce6094c3fda1bb4ec75a692a3701266395b5a.png"
-                alt="شريك" />
+                src="./src/assets/images/partners-07.png"
+                alt="شريك"
+                onerror="this.style.display='none'" />
             </div>
           </div>
         </div>
@@ -397,21 +415,20 @@
     <!-- Footer -->
     <footer class="position-relative py-5">
       <div class="footer-bg d-none d-md-block" aria-hidden="true">
-        <img
-          src="http://localhost:3845/assets/1a29cd0ed64db5c338cf14c8c6bb56f9be143bf1.svg"
-          alt="" />
+        <img src="./src/assets/images/footer.png" alt="" onerror="this.style.display='none'" />
       </div>
 
       <div class="container container-1116">
         <div
-          class="bg-white shadow-soft rounded-4 p-4 p-md-5 d-flex flex-column flex-lg-row gap-5 justify-content-between align-items-end">
+          class="bg-white shadow-soft rounded-4 p-4 p-md-5 d-flex flex-column flex-lg-row gap-5 justify-content-between">
           <div class="flex-grow-1" style="max-width: 600px">
             <img
-              src="http://localhost:3845/assets/80d9d5134654a7881fa9a3d5b8bee88922b69b8c.png"
+              src="./src/assets/images/logo.png"
               alt="طريق البيئة"
               class="brand-logo mb-3"
               style="height: 120px"
-              height="56" />
+              height="56"
+              onerror="this.style.display='none'" />
             <p class="mb-0">
               طريق البيئة للاستشارات المهنية, شركة سعودية رائدة في مجال الاستشارات البيئية، نعمل على
               دعم القطاعين الحكومي والخاص في تحقيق التنمية المستدامة والمحافظة على البيئة، بما
@@ -432,7 +449,138 @@
       </div>
     </footer>
 
+    <!-- Modal: coded from Figma node (converted to Bootstrap markup) -->
+    <div
+      class="modal fade"
+      id="serviceModal"
+      tabindex="-1"
+      aria-labelledby="serviceModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog modal-xl modal-dialog-centered modal-fullscreen-sm-down">
+        <div class="modal-content border-0 shadow-none modal-services">
+          <!-- Close pill -->
+          <button
+            type="button"
+            class="btn-close-pill position-absolute"
+            data-bs-dismiss="modal"
+            aria-label="إغلاق">
+            <span class="visually-hidden">إغلاق</span>
+            <div
+              class="close-icon-wrap bg-white rounded-pill p-2 d-inline-flex align-items-center justify-content-center shadow-sm">
+              <!-- small X icon (SVG) -->
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M6 6L18 18M6 18L18 6"
+                  stroke="#202020"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </div>
+          </button>
+
+          <div class="modal-body">
+            <div class="container-1116 mx-auto modal-inner bg-white rounded-4 p-4 p-md-5">
+              <h2 class="h1 fw-semibold mb-3" id="serviceModalLabel">خدماتنا</h2>
+
+              <!-- Services List View -->
+              <div id="services-list-view">
+                <!-- Dynamic services container -->
+                <div id="services-container">
+                  <!-- Services will be loaded dynamically from services.json -->
+                  <div class="text-center py-5">
+                    <div class="spinner-border text-brand" role="status">
+                      <span class="visually-hidden">جاري التحميل...</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Service Detail View (hidden by default) -->
+              <div id="service-detail-view" class="service-detail-view" style="display: none">
+                <div
+                  class="d-flex flex-column flex-md-row align-items-start align-items-md-center gap-4 mb-4">
+                  <button
+                    class="btn btn-light btn-pill-outline d-inline-flex align-items-center gap-3 ps-2 py-2"
+                    id="back-to-services"
+                    type="button">
+                    <span
+                      class="icon-round bg-white d-inline-flex align-items-center justify-content-center"
+                      style="transform: rotate(180deg)">
+                      <svg
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M4 12H20M4 12C4 13.318 9 17 9 17M4 12C4 10.682 9 7 9 7"
+                          stroke="currentColor"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round" />
+                      </svg>
+                    </span>
+                    <span class="fw-semibold">الخدمات</span>
+                  </button>
+                  <h2 class="h2 fw-semibold mb-0 flex-grow-1" id="service-detail-title">
+                    <!-- Service name will be inserted here -->
+                  </h2>
+                </div>
+
+                <!-- Service Detail View content -->
+                <div id="section-service-detail-content">
+                  <div class="service-description" style="max-width: 800px; margin-left: auto">
+                    <div id="service-detail-description">
+                      <!-- Service description paragraphs will be inserted here -->
+                    </div>
+
+                    <div id="service-form">
+                      <!-- Service form will be inserted here -->
+                    </div>
+                  </div>
+
+                  <div class="mt-5 pt-3">
+                    <button
+                      id="request-service"
+                      class="btn btn-dark btn-pill d-inline-flex align-items-center gap-3 pe-2 py-2"
+                      type="button">
+                      <span class="fw-semibold">طلب الخدمة عبر واتساب</span>
+                      <span
+                        class="icon-round bg-white d-inline-flex align-items-center justify-content-center">
+                        <svg
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M4 12H20M4 12C4 13.318 9 17 9 17M4 12C4 10.682 9 7 9 7"
+                            stroke="black"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round" />
+                        </svg>
+                      </span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <script src="https://cdn.jsdelivr.net/npm/@formkit/auto-animate@0.9.0/dist/auto-animate.min.js"></script>
+    <!-- Bootstrap JS (bundle includes Popper) for modal functionality -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
     <script src="./script.js"></script>
   </body>
 </html>
